@@ -12,6 +12,7 @@ import "./styles.css";
 
 export const RatingsCard = ({ image, rating }) => {
   // Hold state for selection and rating
+  const [selected, setSelected] = useState(false);
 
   // Card tilt
 
