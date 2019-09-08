@@ -1,0 +1,33 @@
+.RatingsCard {
+  cursor: pointer;
+  height: 20rem;
+  position: relative;
+  perspective: 1000px;
+  width: 20rem;
+  /* Filter over box-shadow to support the flip effect */
+
+  /* Apply transition to the filter */
+}
+
+.RatingsCard:hover {
+  /* Filter over box-shadow to support the flip effect */
+}
+
+.RatingsCard__front,
+.RatingsCard__back {
+  background-color: rgb(230, 230, 230);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.RatingsCard__front {
+  background-position: center;
+  background-size: cover;
+}
+
+.RatingsCard__back {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
