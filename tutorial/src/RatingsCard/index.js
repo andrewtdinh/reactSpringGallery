@@ -19,7 +19,15 @@ export const RatingsCard = ({ image, rating }) => {
 
   return (
     // Card container
-    <div />
+    <div className="RatingsCard">
+      <div
+        className="RatingsCard__front"
+        style={{
+          backgroundImage: `url(${image})`
+        }}
+      />
+      <div className="RatingsCard__back" />
+    </div>
   );
 };
 
