@@ -21,11 +21,10 @@ export const App = () => {
   
   return (
     <div className="App">
-      {/* Loop over images and display a card for each */
-        cards.map((card, index) => (
-          <RatingsCard key={index} {...card} />
-        ))
-      }
+      {/* Loop over images and display a card for each */}
+      {cards.map((card, index) => (
+        <RatingsCard key={index} {...card} />
+      ))}
     </div>
   );
 };
