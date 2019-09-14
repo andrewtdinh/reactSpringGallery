@@ -24,15 +24,15 @@ export const RatingsCard = ({ image, rating }) => {
 
   return (
     // Card container
-    <div className="RatingsCard">
-      <div
+    <animated.div className="RatingsCard">
+      <animated.div
         className="RatingsCard__front"
         style={{
           backgroundImage: `url(${image})`
         }}
       />
-      <div className="RatingsCard__back" />
-    </div>
+      <animated.div className="RatingsCard__back" />
+    </animated.div>
   );
 };
 
