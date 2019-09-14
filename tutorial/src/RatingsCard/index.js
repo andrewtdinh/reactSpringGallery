@@ -28,7 +28,9 @@ export const RatingsCard = ({ image, rating }) => {
       <animated.div
         className="RatingsCard__front"
         style={{
-          backgroundImage: `url(${image})`
+          backgroundImage: `url(${image})`,
+          opacity: opacity.interpolate(inverseOpacity),
+          transform
         }}
       />
       <animated.div className="RatingsCard__back" />
