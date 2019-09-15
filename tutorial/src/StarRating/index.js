@@ -17,7 +17,21 @@ export const StarRating = ({ rating, setRating }) => {
 
   // Set stars to animate one after another
 
-  return <div className="StarRating">{/* Display a set of stars */}</div>;
+  return (
+    <div className="StarRating">
+      {animatedStars.map((props, index) => (
+        <AnimatedStar
+          active={index + 1 <= rating}
+          onClick={e => {
+            e.stopPropagation();
+            setRating(index + 1);
+          }}
+          key={index}
+          style={{ ...props }}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default StarRating;
