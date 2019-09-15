@@ -33,12 +33,14 @@ export const RatingsCard = ({ image, rating }) => {
 
   return (
     // Card container
-    <animated.div 
+    <animated.div
       className="RatingsCard"
       onClick={() => setSelected(!selected)}
-      style={{ 
-        transform: !selected && props.state.interpolate(transformCard) 
+      style={{
+        transform: !selected && props.state.interpolate(transformCard)
       }}
+      onMouseLeave={() => set({state: [0, 0, 1]})}
+      onMouseMove={({ clientX: x, clientY: y }) => set({state: calculateValues(x, y)})}
     >
       <animated.div
         className="RatingsCard__front"
