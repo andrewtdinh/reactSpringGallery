@@ -26,16 +26,20 @@ export const RatingsCard = ({ image, rating }) => {
       friction: 22,
       tension: 500
     },
-    [...]
   });
 
-  // Card tilt
-
-  // Flipping
+  const [props, set] = useSpring(() => ({state: [0, 0, 1]}));
+  const transformCard = (x, y, scale) => `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${scale})`;
 
   return (
     // Card container
-    <animated.div className="RatingsCard">
+    <animated.div 
+      className="RatingsCard"
+      onClick={() => setSelected(!selected)}
+      style={{ 
+        transform: !selected && props.state.interpolate(transformCard) 
+      }}
+    >
       <animated.div
         className="RatingsCard__front"
         style={{
