@@ -58,7 +58,9 @@ export const RatingsCard = ({ image, rating }) => {
           opacity,
           transform: transform.interpolate(inverseTransform)
         }}
-      />
+      >
+        {selected && (<StarRating rating={currentRating} setRating={setRating} />)}
+      </animated.div>
     </animated.div>
   );
 };
