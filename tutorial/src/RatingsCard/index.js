@@ -13,6 +13,7 @@ import "./styles.css";
 export const RatingsCard = ({ image, rating }) => {
   // Hold state for selection and rating
   const [selected, setSelected] = useState(false);
+  const [currentRating, setRating] = useState(rating);
   const { opacity, transform } = useSpring({
     opacity: selected ? 1 : 0,
     transform: `rotateY(${selected ? 180 : 0}deg)`
