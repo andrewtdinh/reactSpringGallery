@@ -18,6 +18,9 @@ export const RatingsCard = ({ image, rating }) => {
     transform: `rotateY(${selected ? 180 : 0}deg)`
   });
 
+  const inverseOpacity = o => 1 - o;
+  const inverseTransform = t => `${t} rotateY(180deg)`;
+
   // Card tilt
 
   // Flipping
