@@ -30,6 +30,7 @@ export const RatingsCard = ({ image, rating }) => {
 
   const [props, set] = useSpring(() => ({state: [0, 0, 1]}));
   const transformCard = (x, y, scale) => `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${scale})`;
+  const calculateValues = (x, y) => [-(y - window.innerHeight / 2) / 40, (x - window.innerWidth / 2) / 40, 1.1];
 
   return (
     // Card container
