@@ -21,6 +21,14 @@ export const RatingsCard = ({ image, rating }) => {
   const inverseOpacity = o => 1 - o;
   const inverseTransform = t => `${t} rotateY(180deg)`;
 
+  useSpring({
+    config: {
+      friction: 22,
+      tension: 500
+    },
+    [...]
+  });
+
   // Card tilt
 
   // Flipping
