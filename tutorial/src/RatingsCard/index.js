@@ -33,7 +33,13 @@ export const RatingsCard = ({ image, rating }) => {
           transform
         }}
       />
-      <animated.div className="RatingsCard__back" />
+      <animated.div
+        className="RatingsCard__back"
+        style={{
+          opacity,
+          transform: transform.interpolate(inverseTransform)
+        }}
+      />
     </animated.div>
   );
 };
